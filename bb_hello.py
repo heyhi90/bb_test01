@@ -19,9 +19,9 @@ options.add_argument("lang=ko");
 #driver 실행
 driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), options=options)
 driver.implicitly_wait(6)
-driver.get('https://bunker.blue/diary')
+driver.get('https://google.co.kr')
 
-text=driver.find_element_by_xpath('//*[@id="access"]/div[1]/h1').text
+text1=driver.find_element_by_xpath('//*[@id="gb"]/div[2]/div[3]/div[1]/div/div[2]/a').text
 """
 
 
@@ -34,7 +34,7 @@ post_Num=[]
 #텔레그램 환경변수
 github_T = os.environ.get('GIT_TOKEN')
 testbot = telegram.Bot(token=github_T)
-testbot.sendMessage(1840767554, text)
+testbot.sendMessage(1840767554, text1)
 
 def ppompp():
     testbot = telegram.Bot(token=github_T)
