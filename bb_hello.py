@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import os
 
 chrome_options1 = Options()
-chrome_options1.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options1.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
 chrome_options1.add_argument('--disable-gpu')
 chrome_options1.add_argument('--no-sandbox')
 
@@ -15,7 +15,7 @@ chrome_options1.add_argument('--no-sandbox')
 github_T = os.environ.get('GIT_TOKEN')
 
 #driver 실행
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options1)
+driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=chrome_options1)
 driver.implicitly_wait(3)
 
 driver.get('https://bunker.blue/diary')
