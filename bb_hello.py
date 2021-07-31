@@ -15,12 +15,16 @@ options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4)
 options.add_argument("lang=ko");
 
 
-"""
+
 #driver 실행
 driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=options)
 driver.implicitly_wait(6)
-
 driver.get('https://bunker.blue/diary')
+
+text=driver.find_element_by_xpath('//*[@id="access"]/div[1]/h1').text
+"""
+
+
 driver.find_element_by_name('user_id').send_keys('asd12')
 driver.find_element_by_name('password').send_keys('asd1234')
 driver.find_element_by_xpath('//*[@id="message_login_form"]/p/button').click()
@@ -30,7 +34,7 @@ post_Num=[]
 #텔레그램 환경변수
 github_T = os.environ.get('GIT_TOKEN')
 testbot = telegram.Bot(token=github_T)
-testbot.sendMessage(1840767554, 'twewer')
+testbot.sendMessage(1840767554, text)
 
 def ppompp():
     testbot = telegram.Bot(token=github_T)
