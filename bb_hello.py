@@ -19,9 +19,9 @@ chrome_options.add_argument("lang=ko")
 #driver 실행
 driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=chrome_options)
 driver.implicitly_wait(6)
-driver.get('https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com')
+driver.get('https://bunker.blue/diary')
 
-text1=driver.find_element_by_xpath('//*[@id="content"]/div[2]/div/p').text
+text1=driver.find_element_by_xpath('//*[@id="access"]/div[1]/h1').text
 """
 
 
