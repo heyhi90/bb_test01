@@ -12,7 +12,7 @@ options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 options.add_argument('--disable-dev-shm-usage')
 options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36")
-options.add_argument("lang=ko");
+options.add_argument("lang=ko")
 
 
 
