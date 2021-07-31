@@ -15,7 +15,7 @@ options.add_argument('--disable-dev-shm-usage')
 options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36")
 options.add_argument("lang=ko");
 
-
+"""
 #텔레그램 환경변수
 github_T = os.environ.get('GIT_TOKEN')
 
@@ -29,7 +29,7 @@ driver.find_element_by_name('password').send_keys('asd1234')
 driver.find_element_by_xpath('//*[@id="message_login_form"]/p/button').click()
 
 post_Num=[]
-
+"""
 testbot = telegram.Bot(token=github_T)
 testbot.sendMessage(1840767554, 'twewer')
 
@@ -50,7 +50,6 @@ def ppompp():
     print(post_Num[0])
     testbot.sendMessage(1840767554, 'twewer')
 """
-    driver.close()
 
 if __name__ == '__main__':
 
