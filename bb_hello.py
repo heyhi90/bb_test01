@@ -1,10 +1,10 @@
 #패키지 임폴트
 import telegram
 
-#github_T = os.environ.get('GIT_TOKEN')
+github_T = os.environ.get('GIT_TOKEN')
 
 def ppompp():
-    testbot = telegram.Bot(token='1902707442:AAHcK9oumcVMWUWJMAhk0JFj-aH-Gxp6e48')
+    testbot = telegram.Bot(token=github_T)
     testbot.sendMessage(1840767554, 'test1')
 
 if __name__ == '__main__':
