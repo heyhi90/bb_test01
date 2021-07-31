@@ -1,5 +1,6 @@
 #패키지 임폴트
 import telegram
+import os
 
 github_T = os.environ.get('GIT_TOKEN')
 
