@@ -6,7 +6,7 @@ github_T = os.environ.get('GIT_TOKEN')
 
 def ppompp():
     testbot = telegram.Bot(token=github_T)
-    testbot.sendMessage(1840767554, 'test1')
+    testbot.sendMessage(1840767554, 'test2')
 
 if __name__ == '__main__':
 
