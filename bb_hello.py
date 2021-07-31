@@ -17,7 +17,7 @@ options.add_argument("lang=ko");
 
 
 #driver 실행
-driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=options)
+driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), options=options)
 driver.implicitly_wait(6)
 driver.get('https://bunker.blue/diary')
 
