@@ -6,22 +6,22 @@ import requests
 from bs4 import BeautifulSoup
 import os
 
-options = webdriver.ChromeOptions()
-options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
-options.add_argument("--headless")
-options.add_argument("--no-sandbox")
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36")
-options.add_argument("lang=ko")
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36")
+chrome_options.add_argument("lang=ko")
 
 
 
 #driver 실행
-driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), options=options)
+driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=chrome_options)
 driver.implicitly_wait(6)
-driver.get('https://google.co.kr')
+driver.get('https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com')
 
-text1=driver.find_element_by_xpath('//*[@id="gb"]/div[2]/div[3]/div[1]/div/div[2]/a').text
+text1=driver.find_element_by_xpath('//*[@id="content"]/div[2]/div/p').text
 """
 
 
@@ -37,7 +37,7 @@ testbot = telegram.Bot(token=github_T)
 testbot.sendMessage(1840767554, text1)
 
 def ppompp():
-    testbot = telegram.Bot(token=github_T)
+    print('')
 
 """
     html = driver.page_source
