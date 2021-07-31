@@ -1,5 +1,9 @@
 #패키지 임폴트
+from selenium import webdriver
 import telegram
+import time
+import requests
+from bs4 import BeautifulSoup
 import os
 
 github_T = os.environ.get('GIT_TOKEN')
