@@ -16,7 +16,7 @@ github_T = os.environ.get('GIT_TOKEN')
 
 #driver 실행
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"))
 driver.implicitly_wait(3)
 
 driver.get('https://bunker.blue/diary')
